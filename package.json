@@ -1,0 +1,16 @@
+{
+  "name": "chessai",
+  "version": "1.0.0",
+  "description": "A simple computer based chess game",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "author": "Shubham",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1"
+  }
+}
