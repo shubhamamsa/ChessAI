@@ -1,0 +1,14 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#chessBoard {
+    overflow: auto;
+    position: absolute;
+    top: 2.5vw;
+    margin-left: 25%;
+    height: 45vw;
+    width: 45vw;
+    border-radius: 0.5em;
+}
