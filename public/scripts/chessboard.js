@@ -1,41 +1,31 @@
-//Piece Type
-let NONE = 0;
-let PAWN = 1;
-let KNIGHT = 2;
-let BISHOP = 3;
-let ROOK = 4;
-let QUEEN = 5;
-let KING = 6;
 
-//Piece Color
-let WHITE = 8;
-let BLACK = 16;
 
-let whitePieces = new Set();
-let blackPieces = new Set();
+// let whitePieces = new Set();
+// let blackPieces = new Set();
 
-let WKCastle = 1, WQCastle = 1, BQCastle = 1, BKCastle = 1;
-let QRookFile = 0, KRookFile = 7;
+// let WKCastle = 1, WQCastle = 1, BQCastle = 1, BKCastle = 1;
+// let QRookFile = 0, KRookFile = 7;
 
-let legalMoves = {};
+// let legalMoves = {};
 
-//Create Board
-let board = new Array(8).fill(0).map(() => new Array(8).fill(0));
+// //Create Board
+// let board = new Array(8).fill(0).map(() => new Array(8).fill(0));
 
-//Piece Mapping
-let pieceDesp = {
-            'p': PAWN,
-            'n': KNIGHT,
-            'b': BISHOP,
-            'r': ROOK,
-            'q': QUEEN,
-            'k': KING
-        }
+// //Piece Mapping
+// let pieceDesp = {
+//             'p': PAWN,
+//             'n': KNIGHT,
+//             'b': BISHOP,
+//             'r': ROOK,
+//             'q': QUEEN,
+//             'k': KING
+//         }
 
 //Initial Board Description
 let FEN = "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w";
 let fenBoard = FEN.split(' ')[0];
 let playerTurn = FEN.split(' ')[1];
+
 //Initalise board with FEN string
 let rank = 8, file = 1;
 for(let i=0;i<fenBoard.length;i++)   {
@@ -298,3 +288,4 @@ function KKLegalMoves(rank, file, pieceType)   {
     }
     legalMoves[(rank+1)+""+(file+1)] = tempMoves;
 }
+
